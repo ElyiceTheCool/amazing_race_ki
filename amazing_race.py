@@ -14,10 +14,13 @@ road_blocks = ["Reride previous ride", "No Fast Lane allowed on next ride!", "Ta
 # generates a list of rides that must be completed
 def generate():
     length = int(input("How many rides do you want included? "))
+    ride_list = []
     for ride in range(length):
         ride = random.choice(all_rides)
-        print(ride)
+        ride_list.append(ride)
         all_rides.remove(ride)
+
+    print(ride_list)
 
 # TODO: Add specific roadblocks for certain rides. For example, blue train on Mystic or Lime barrel on Cargo.
     if length > 5:
@@ -31,3 +34,5 @@ participants = int(input("How many people are playing today? "))
 print("Please split into two teams of", participants/2)
 
 generate()
+
+# Session goal: generate rides in single list with roadblocks in between
