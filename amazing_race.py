@@ -49,3 +49,4 @@ generate()
 checks()
 
 # TODO: Insert roadblock randomly into ride list each time
+# TODO: Assign each team a different starting ride
